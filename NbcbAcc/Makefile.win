@@ -1,0 +1,29 @@
+# Project: NbcbAcc
+# Makefile created by Dev-C++ 5.2.0.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = source/NbcbAcc.o $(RES)
+LINKOBJ  = source/NbcbAcc.o $(RES)
+LIBS     = -L"c:/Program Files/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc  -g3 
+INCS     = -I"c:/Program Files/Dev-Cpp/MinGW32/include" 
+CXXINCS  = -I"c:/Program Files/Dev-Cpp/MinGW32/include" 
+BIN      = NbcbAcc.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS   = $(INCS)   -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before NbcbAcc.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "NbcbAcc.exe" $(LIBS)
+
+source/NbcbAcc.o: source/NbcbAcc.cpp
+	$(CPP) -c source/NbcbAcc.cpp -o source/NbcbAcc.o $(CXXFLAGS)

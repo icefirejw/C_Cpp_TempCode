@@ -1,0 +1,19 @@
+
+==================================================                  
+   Start Ping at: Wed Jun 26 20:12:24 2013
+                                                
+   Write to FILE: ping_test.txt                                                
+==================================================                  
+
+Pinging 11.17.7.254 with 3000 bytes of data:
+
+Reply from 11.17.7.254: bytes=3000 time=39ms TTL=255
+Reply from 11.17.7.254: bytes=3000 time=3ms TTL=255
+Reply from 11.17.7.254: bytes=3000 time=4ms TTL=255
+Reply from 11.17.7.254: bytes=3000 time=3ms TTL=255
+Reply from 11.17.7.254: bytes=3000 time=4ms TTL=255
+
+Ping statistics for 11.17.7.254:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 3ms, Maximum = 39ms, Average = 10ms

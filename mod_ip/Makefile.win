@@ -1,0 +1,36 @@
+# Project: modify ip
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o mod_ip.o anlyz_conf.o $(RES)
+LINKOBJ  = main.o mod_ip.o anlyz_conf.o $(RES)
+LIBS =  -L"D:/Program Files/DEV-CPP/lib" "D:/Program Files/DEV-CPP/Lib/libiphlpapi.a" "D:/Program Files/DEV-CPP/Lib/libwsock32.a"  
+INCS =  -I"D:/Program Files/DEV-CPP/include" 
+CXXINCS =  -I"D:/Program Files/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/Program Files/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/Program Files/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/Program Files/DEV-CPP/include/c++/3.4.2"  -I"D:/Program Files/DEV-CPP/include" 
+BIN  = modify_ip.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before modify_ip.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "modify_ip.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+mod_ip.o: mod_ip.cpp
+	$(CPP) -c mod_ip.cpp -o mod_ip.o $(CXXFLAGS)
+
+anlyz_conf.o: anlyz_conf.cpp
+	$(CPP) -c anlyz_conf.cpp -o anlyz_conf.o $(CXXFLAGS)
